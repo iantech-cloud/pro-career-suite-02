@@ -161,6 +161,11 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Custom transition utilities */
+  .transition-organic {
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
   /* Organic Natural Shadows */
   .shadow-elegant {
     box-shadow: 0 8px 32px -12px hsl(var(--primary) / 0.15), 0 2px 8px -2px hsl(var(--border) / 0.8);
