@@ -8,33 +8,35 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    /* Modern Professional Theme - Clean & Trust-building */
+    --background: 210 20% 98%;
+    --foreground: 224 44% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 224 44% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 224 44% 14%;
 
-    --primary: 217 91% 60%;
+    /* Primary: Indigo 700 - Trust-building blue */
+    --primary: 227 84% 48%;
     --primary-foreground: 0 0% 100%;
-    
-    --primary-glow: 225 100% 70%;
-    --primary-deep: 217 91% 45%;
+    --primary-glow: 227 84% 65%;
+    --primary-deep: 227 84% 38%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 215 25% 27%;
+    /* Secondary: Slate 500 - Soft gray-blue */
+    --secondary: 215 16% 47%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 215 13% 65%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 14% 46%;
 
-    --accent: 262 83% 58%;
+    /* Accent: Emerald 500 - For highlights and CTAs */
+    --accent: 160 84% 39%;
     --accent-foreground: 0 0% 100%;
-    
-    --accent-glow: 270 95% 75%;
+    --accent-glow: 160 84% 55%;
 
-    --success: 142 76% 36%;
+    --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -42,21 +44,21 @@ All colors MUST be HSL.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --ring: 227 84% 48%;
     
-    /* Professional gradients */
+    /* Modern Professional Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
     
-    /* Professional shadows */
-    --shadow-primary: 0 10px 25px -5px hsl(var(--primary) / 0.1);
-    --shadow-accent: 0 10px 25px -5px hsl(var(--accent) / 0.1);
-    --shadow-card: 0 4px 6px -1px hsl(215 25% 27% / 0.1);
+    /* Professional Shadows - Subtle elevation */
+    --shadow-primary: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
+    --shadow-accent: 0 4px 6px -1px hsl(var(--accent) / 0.1), 0 2px 4px -1px hsl(var(--accent) / 0.06);
+    --shadow-card: 0 1px 3px 0 hsl(224 44% 14% / 0.1), 0 1px 2px 0 hsl(224 44% 14% / 0.06);
     
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Smooth Transitions */
+    --transition-smooth: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -139,7 +141,15 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-foreground;
+  }
+  
+  a {
+    @apply text-primary hover:text-primary/80 transition-colors;
   }
 }
 
