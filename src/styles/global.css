@@ -1,0 +1,5 @@
+/* Global styles and theme variables */
+/* This would contain global styles, CSS variables, etc. */
+
+/* Import the main index.css for now */
+@import '../index.css';
