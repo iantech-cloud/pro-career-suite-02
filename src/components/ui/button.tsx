@@ -5,22 +5,22 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium tracking-tight ring-offset-background transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-organic text-sm font-medium tracking-wide ring-offset-background transition-organic focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:transform",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-card",
+        default: "bg-primary text-primary-foreground hover:bg-primary/92 hover:scale-[1.02] shadow-natural",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-card",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/92 hover:scale-[1.01] shadow-natural",
         outline:
-          "border border-input bg-background hover:bg-muted hover:text-foreground shadow-sm",
+          "border border-input bg-background hover:bg-muted hover:text-foreground shadow-sm hover:shadow-natural hover:scale-[1.01]",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm",
-        ghost: "hover:bg-muted hover:text-foreground",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/85 hover:scale-[1.01] shadow-sm",
+        ghost: "hover:bg-muted hover:text-foreground hover:scale-[1.01]",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-hero text-white hover:opacity-90 shadow-accent font-semibold",
-        professional: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-primary",
-        success: "bg-success text-success-foreground hover:bg-success/90 shadow-card",
+        hero: "bg-gradient-hero text-white hover:opacity-92 hover:scale-[1.02] shadow-organic font-semibold",
+        professional: "bg-primary text-primary-foreground hover:bg-primary/92 hover:scale-[1.01] shadow-primary",
+        success: "bg-success text-success-foreground hover:bg-success/92 hover:scale-[1.01] shadow-natural",
       },
       size: {
         default: "h-10 px-4 py-2",
